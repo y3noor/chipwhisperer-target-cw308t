@@ -17,3 +17,9 @@
 /CW308T_toCW312T/gerbers/01/CW308T_to_cardedge.*
 /CW312T_XC7A35T/ordering/
 .DS_Store
+/CW312T_ESP32S3/references/
+/CW312T_ESP32C5/references/
+/CW312T_STM32N657/references/
+/CW312T_ESP32S3/*.kicad_prl
+/CW312T_ESP32C5/*.kicad_prl
+/CW312T_STM32N657/*.kicad_prl

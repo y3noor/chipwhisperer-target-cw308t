@@ -1,0 +1,65 @@
+Contact,Card side,CW313 signal,Card net,Target pin / function,Direction at card,Card voltage
+A1,Back,GND,GND,Ground plane,Return,0 V
+B1,Front,SHUNTL,NC,,Unused,Open
+A2,Back,GND,GND,Ground plane,Return,0 V
+B2,Front,SHUNTH,NC,,Unused,Open
+A3,Back,FILT_LP,NC,,Unused,Open
+B3,Front,GND,GND,Ground plane,Return,0 V
+A4,Back,VCC2.5,NC,,Unused,Open
+B4,Front,FILT_HP,NC,,Unused,Open
+A5,Back,VCC3.3,NC,,Unused,Open
+B5,Front,FILTIN,NC,,Unused,Open
+A6,Back,VCC5.0,NC,,Unused,Open
+B6,Front,VCC1.0,NC,,Unused,Open
+A7,Back,VCCADJ,NC,,Unused,Open
+B7,Front,VCC1.2,NC,,Unused,Open
+A8,Back,GND,GND,Ground plane,Return,0 V
+B8,Front,VCC1.8,NC,,Unused,Open
+A9,Back,HDR1,NC,,Unused,Open
+B9,Front,GND,GND,Ground plane,Return,0 V
+A10,Back,HDR2,NC,,Unused,Open
+B10,Front,IOVREF,NC,,Unused,Open
+A11,Back,HDR3,NC,,Unused,Open
+B11,Front,LED1,NC,,Unused,Open
+A12,Back,HDR4,NC,,Unused,Open
+B12,Front,LED2,NC,,Unused,Open
+A13,Back,HDR5,NC,,Unused,Open
+B13,Front,LED3,NC,,Unused,Open
+A14,Back,HDR6,NC,,Unused,Open
+B14,Front,nRST,NC,,Unused,Open
+A15,Back,HDR7,NC,,Unused,Open
+B15,Front,GND,GND,Ground plane,Return,0 V
+A16,Back,HDR8,NC,,Unused,Open
+B16,Front,GPIO1/TX,UART_RX,U1.36 RXD0,In,3.3 V
+A17,Back,HDR9,NC,,Unused,Open
+B17,Front,GPIO2/RX,UART_TX,U1.37 TXD0,Out,3.3 V
+A18,Back,HDR10,NC,,Unused,Open
+B18,Front,GPIO3,NC,,Unused,Open
+A19,Back,nRST_OUT,NC,,Unused,Open
+B19,Front,GPIO4,TRIGGER,U1.4 IO4,Out,3.3 V
+A20,Back,GND,GND,Ground plane,Return,0 V
+B20,Front,SCK,NC,,Unused,Open
+A21,Back,TRACECLK,NC,,Unused,Open
+B21,Front,GND,GND,Ground plane,Return,0 V
+A22,Back,TRACED0,NC,,Unused,Open
+B22,Front,GND,GND,Ground plane,Return,0 V
+A23,Back,TRACED1,NC,,Unused,Open
+B23,Front,MISO,NC,,Unused,Open
+A24,Back,TRACED2,NC,,Unused,Open
+B24,Front,MOSI,NC,,Unused,Open
+A25,Back,TRACED3,NC,,Unused,Open
+B25,Front,CW_PDIC,NC,,Unused,Open
+A26,Back,JTAG_VREF,JTAG_VREF,3.3 V through R5,"Out, sense",3.3 V
+B26,Front,CW_PDID,NC,,Unused,Open
+A27,Back,GND,GND,Ground plane,Return,0 V
+B27,Front,CLKOUT,NC,,Unused,Open
+A28,Back,GND,GND,Ground plane,Return,0 V
+B28,Front,CLKOUT_n,NC,,Unused,Open
+A29,Back,CLKIN,NC,,Unused,Open
+B29,Front,JTAG_TDI,TDI,U1.34 IO41,In,3.3 V
+A30,Back,CLKIN_n,NC,,Unused,Open
+B30,Front,JTAG_TDO,TDO,U1.33 IO40,Out,3.3 V
+A31,Back,JTAG_nRST,NC,,Unused,Open
+B31,Front,JTAG_TMS,TMS,U1.35 IO42,In,3.3 V
+A32,Back,JTAG_TRST,NC,,Unused,Open
+B32,Front,JTAG_TCK,TCK,U1.32 IO39,In,3.3 V
