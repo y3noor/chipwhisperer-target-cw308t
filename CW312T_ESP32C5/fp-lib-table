@@ -1,0 +1,1 @@
+(fp_lib_table (version 7) (lib (name "CW312T_ESP32C5") (type "KiCad") (uri "${KIPRJMOD}/CW312T_ESP32C5.pretty") (options "") (descr "")))
