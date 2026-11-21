@@ -1,6 +1,6 @@
 # CW312T STM32N657, rev 01
 
-This six-layer CW312 card uses the STM32N657X0H3Q in the 264-ball VFBGA. It has SWD, USART1, and a 512-Mbit external serial NOR flash. Open the KiCad 10 project to edit the schematic and PCB. The BOM and all 64 CW312 contacts are in `bom.csv` and `cw312-pinout.csv`.
+This four-layer CW312 card uses the STM32N657X0H3Q in the 264-ball VFBGA. It has SWD, USART1, and a 512-Mbit external serial NOR flash. Open the KiCad 10 project to edit the schematic and PCB. The BOM and all 64 CW312 contacts are in `bom.csv` and `cw312-pinout.csv`.
 
 **Fabrication hold.** Complete the electrical and layout checks below before release.
 
@@ -39,11 +39,11 @@ R1 is the removable 0 Ω link in the 1.8 V auxiliary input. With power off, remo
 
 The 64 contact pads match the template and RP2350 pad dimensions and center offsets to 0.0001 mm resolution. The 1.00 mm pitch increases to 3.00 mm across the key. The tongue span is 34.30 mm. The contact lands are 0.70 × 4.20 mm. The A row is on the back and the B row is on the component side. The card is 1.60 mm thick for the CW313 Samtec -02 slot. The board outline and contact positions follow the CW312 template. The nearest fitted component is more than 4 mm from the end of a contact land. Confirm seating, insertion force, and probe access with a first article.
 
-The BGA has a 14 × 14 mm body, a 0.80 mm grid, 0.40 mm lands, and 0.47 mm mask openings. The layout uses six copper layers to escape the active BGA rows, provide ground references on layers 2 and 5, and distribute the auxiliary and core supplies on layers 3 and 4. The two inner ground layers also carry some routing. The reference planes must pass a return-path review.
+The BGA has a 14 × 14 mm body, a 0.80 mm grid, 0.40 mm lands, and 0.47 mm mask openings. The board uses four copper layers at 1.60 mm thickness. Layers 1 and 4 carry components, traces, and ground pours. Layer 2 carries the main ground pour and some traces. Layer 3 carries separate core and auxiliary supply pours and some traces. BGA escape uses plated through vias with a 0.20 mm minimum drill and a 0.125 mm minimum trace width. Check return paths around the traces and plane openings before fabrication.
 
 KiCad 10.0.6 ERC and DRC report zero violations. DRC also reports zero unrouted pads and zero schematic parity issues.
 
-The serial NOR has the same memory family and port assignment as the Nucleo design. This board uses the orderable SOIC-16W variant, with a 133 MHz part rating. The routed CLK, DQS, and IO0–IO7 copper lengths range from 6.10 to 25.26 mm, before via and package lengths. The Nucleo reference targets 1.27 mm matching for high-speed operation. The current routing requires length and return-path review before release. Confirm the PCB stackup and evaluate the flash timing at the intended clock rate with the selected assembly process. Review the core and auxiliary copper for IR drop at startup and full load. Verify the SMPS feedback route and snubber layout. Validate BGA solder mask and drill tolerances with the fabricator. No fabrication files are issued during the hold.
+The serial NOR has the same memory family and port assignment as the Nucleo design. This board uses the orderable SOIC-16W variant, with a 133 MHz part rating. The routed CLK, DQS, and IO0–IO7 copper lengths range from 6.10 to 25.25 mm, before via and package lengths. The Nucleo reference targets 1.27 mm matching for high-speed operation. The current routing requires length and return-path review before release. Confirm the PCB stackup and evaluate the flash timing at the intended clock rate with the selected assembly process. Review the core and auxiliary copper for IR drop at startup and full load. Verify the SMPS feedback route and snubber layout. Validate BGA solder mask and drill tolerances with the fabricator. No fabrication files are issued during the hold.
 
 For the first article, verify the sequenced rise and discharge of all rails, HSE startup, SWD attachment, USART1 serial boot, flash identification and erase/write/read, flash boot, and current at idle and under load. Also verify the behavior when external signal cables are connected and the target powers down.
 
